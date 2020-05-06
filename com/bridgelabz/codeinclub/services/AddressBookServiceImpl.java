@@ -1,22 +1,22 @@
 package com.bridgelabz.codeinclub.services;
-
+/**
+ In this service to implements the method and pass data on ReadCSV file
+  @author manjit Khurana
+*/
 import com.bridgelabz.codeinclub.utils.ReadCSV;
-
 import com.bridgelabz.codeinclub.utils.AddressBookUtill;
-
 import com.bridgelabz.codeinclub.modles.People;
 import java.util.*;
 
+// Implent  AddressBookService Method 
 
 public class AddressBookServiceImpl implements AddressBookService
 {
-	
-	  final ReadCSV readInput;
-	  
-	  public AddressBookServiceImpl(final ReadCSV readInput){
+  final ReadCSV readInput;
+  
+  public AddressBookServiceImpl(ReadCSV readInput){
         this.readInput = readInput;
     }
-
 
 	@Override
 	public void addPerson(){
@@ -24,13 +24,13 @@ public class AddressBookServiceImpl implements AddressBookService
 		final String firstName = AddressBookUtill.getUserString();
 		System.out.println("Enter First name ");
        
-	    final String lastName = AddressBookUtill.getUserString();  
+	   	 final String lastName = AddressBookUtill.getUserString();  
 		System.out.println("Enter Last name ");
        	
 		final String address = AddressBookUtill.getUserString();
 		System.out.println("Enter Address ");
       
-	    final String city = AddressBookUtill.getUserString();
+	        final String city = AddressBookUtill.getUserString();
 		System.out.println("Enter City ");
        
 		final String state = AddressBookUtill.getUserString();
@@ -46,13 +46,14 @@ public class AddressBookServiceImpl implements AddressBookService
 		readInput.addToAddressBook(people);
 		
  }
-	@Override
+
+         @Override
 	public void saveInfo(){
-      readInput.storeInfo();
-    }
+    	  readInput.storeInfo();
+   	 }
 	
 	@Override
-    public void showData(){
+        public void showData(){
 	readInput.showDetails();
     }
 }

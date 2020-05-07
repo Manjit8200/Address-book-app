@@ -15,7 +15,7 @@ public class Main{
 //Main Method
     public static void main(String[] args){
 	    System.out.println("Welcome to AddressBook Application");
-    AddressBookService addressBookService = new AddressBookServiceImpl();
+    AddressBookService addressBookService = new AddressBookServiceImpl(new ReadCsv());
    
   	while(true){
         

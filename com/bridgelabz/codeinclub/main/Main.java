@@ -14,15 +14,17 @@ public class Main{
     
 //Main Method
     public static void main(String[] args){
-    AddressBookService addressBookService = new AddressBookServiceImpl(new ReadCSV());
+	    System.out.println("Welcome to AddressBook Application");
+    AddressBookService addressBookService = new AddressBookServiceImpl();
    
   	while(true){
         
       		 System.out.println("Select the task to perform \n"+
 								"1. Create new People Entry \n"+
-								"2. Show Address-Book Entry\n"+
-								"3. Save Address-Book \n"+
-								"4.Close Address-Book\n");     
+								"2. Show existing Entry\n"+
+								"3. Save AddressBook \n"+
+								"4.Delete AddressBook\n"+
+								"5.Close AddressBook\n");      
          	final int select = AddressBookUtill.getUserNumber();
             	
             	switch(select){
@@ -39,6 +41,9 @@ public class Main{
                     addressBookService.saveInfo();
                     break;
 		case 4:
+		   System.out.println("Delete AddressBook App");
+		   //addressBookService.deletePeople();
+		case 5:
 		 System.out.println("Close Address-Book App");
                  System.exit(0);
                 

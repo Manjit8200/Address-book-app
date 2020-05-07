@@ -21,28 +21,31 @@ public class AddressBookServiceImpl implements AddressBookService
 	@Override
 	public void addPerson(){
 		
-		final String firstName = AddressBookUtill.getUserString();
+		AddressBookUtill.getUserString();
+		
 		System.out.println("Enter First name ");
-       
-	   	 final String lastName = AddressBookUtill.getUserString();  
-		System.out.println("Enter Last name ");
-       	
+		final String firstName = AddressBookUtill.getUserString();
+		
+        	System.out.println("Enter Last name ");
+	    	final String lastName = AddressBookUtill.getUserString();  
+		
+       		System.out.println("Enter Address ");
 		final String address = AddressBookUtill.getUserString();
-		System.out.println("Enter Address ");
-      
-	        final String city = AddressBookUtill.getUserString();
-		System.out.println("Enter City ");
-       
+		
+       		System.out.println("Enter City ");
+	    	final String city = AddressBookUtill.getUserString();
+		
+       		System.out.println("Enter State ");
 		final String state = AddressBookUtill.getUserString();
-		System.out.println("Enter State ");
-       
+		
+       		System.out.println("Enter Phone number ");
 	   	final String phoneNumber = AddressBookUtill.getUserString();      	   
-		System.out.println("Enter Phone number ");
-       
+		
+       		System.out.println("Enter ZipCode ");
 		final String zip = AddressBookUtill.getUserString();	  
-		System.out.println("Enter ZipCode ");
+		
 	
-		final People people = new People(firstName,lastName,address,city,state,phoneNumber,zip);		
+		final People people = new People(firstName,lastName,address,city,state,phoneNumber,zip);		;		
 		readInput.addToAddressBook(people);
 		
  }
@@ -56,4 +59,5 @@ public class AddressBookServiceImpl implements AddressBookService
         public void showData(){
 	readInput.showDetails();
     }
+
 }
